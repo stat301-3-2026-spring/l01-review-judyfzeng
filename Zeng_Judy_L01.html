@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Judy Zeng">
-<meta name="dcterms.date" content="2026-03-31">
+<meta name="dcterms.date" content="2026-04-02">
 
 <title>L01 Judy Zeng</title>
 <style>
@@ -2229,7 +2229,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 31, 2026</p>
+      <p class="date">April 2, 2026</p>
     </div>
   </div>
   
@@ -2274,7 +2274,15 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<ul>
+<li>Data cleaning &amp; EDA</li>
+<li>Split training/testing data &amp; set up resampling folds</li>
+<li>Create recipes / feature engineering</li>
+<li>Build hyperparameter tuning grids</li>
+<li>Fit/tune models</li>
+<li>Evaluate performance to identify best model</li>
+<li>Fit best model on test data &amp; evaluate performance</li>
+</ul>
 </div>
 </div>
 </section>
@@ -2291,7 +2299,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Supervised learning has a target variable and outcome of interest while unsupervised learning has no target variable and instead extracts structure from the data.</p>
 </div>
 </div>
 </section>
@@ -2310,7 +2318,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Descriptive models identify patterns, trends, and relationships in the data.</p>
 </div>
 </div>
 </section>
@@ -2326,7 +2334,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Inferential models evaluates how variable x affects target outcome y (aka find the causal effect of x on y).</p>
 </div>
 </div>
 </section>
@@ -2342,7 +2350,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Predictive models predict target outcome y given predictors x.</p>
 </div>
 </div>
 </section>
@@ -2363,7 +2371,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>A mechanistic model assumes an underlying formula or structure in order to predict the outcome variable.</p>
 </div>
 </div>
 </section>
@@ -2380,7 +2388,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>An empirically driven model does not assume any underlying formula or structure, and instead relies on patterns in the data to predict the outcome variable.</p>
 </div>
 </div>
 </section>
@@ -2397,7 +2405,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Mechanistic model is used interchangeably with parametric model. Empirically driven model is used interchangeably with nonparametric model.</p>
 </div>
 </div>
 </section>
@@ -2414,7 +2422,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Mechanistic model is easier to interpret because the model is built on established theories and formulas.</p>
 </div>
 </div>
 </section>
@@ -2431,7 +2439,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Empirically driven models are more flexible because there is no underlying formula and assumptions limiting the prediction outcomes and interpretations. These models can fit to complex patterns in the data.</p>
 </div>
 </div>
 </section>
@@ -2448,7 +2456,8 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Mechanistic models are more biased (as the underlying formula may be overly simplistic) but have lower variance (as these models are robust to small changes in the training data).</p>
+<p>Empirically driven models have lower bias (because they are more flexible and fit to the patterns in the data) but higher variance (as these models tend to overfit the data).</p>
 </div>
 </div>
 </section>
@@ -2466,7 +2475,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Regression problems predict a continuous variable outcome while classification problems predict a categorical variable outcome.</p>
 </div>
 </div>
 </section>
@@ -2483,7 +2492,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Stratifying by the outcome variable ensures the training and testing data contain balanced class proportions / distribution and prevents bias. For heavily imbalanced or skewed data, there might be a chance that the minority class is underrepresented or unrepresented in one of the data splits, which biases the model.</p>
 </div>
 </div>
 </section>
@@ -2500,7 +2509,8 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>V-fold cross validation splits the training data into V subsets (aka folds) and use V-1 folds as training data and the remaining fold as the testing data to evaluate the performance of the model. This is repeated until all the folds have served as testing data. Then this entire process is repeated for however many repeats is specified.</p>
+<p>The final performance result is the average of all the fitted and evaluated models. We use V-fold cross validation to ensure the model performance estimates are reliable.</p>
 </div>
 </div>
 </section>
@@ -2517,7 +2527,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Bootstrap resampling is preferred when the dataset is small. V-fold cross validation might leave too few samples in each fold for accurate and reliable model performance estimates.</p>
 </div>
 </div>
 </section>
@@ -2534,7 +2544,8 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Model tuning is the process of evaluating the performance of different hyperparameter values in a model.</p>
+<p>We use model tuning to identify the best hyperparameters for each model for the given prediction problem.</p>
 </div>
 </div>
 </section>
@@ -2551,7 +2562,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>RMSE and MAE.</p>
 </div>
 </div>
 <p>What are two common performance metrics when dealing with a classification ML problem?</p>
@@ -2565,7 +2576,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>ROC AUC and accuracy.</p>
 </div>
 </div>
 </section>
@@ -2586,7 +2597,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Inferential because it wants to evaluate whether there is a causal effect of service calls on customer likelihood.</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -2602,7 +2613,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Prediction because this question wants to predict a specific value for the outcome of interest (ie. customer churn likelihood).</p>
 </div>
 </div>
 </section>
